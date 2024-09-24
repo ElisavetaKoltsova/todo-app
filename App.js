@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, ScrollView, StyleSheet, View } from 'react-native';
 import Header from './components/Header';
 import List from './components/List';
 import { useState } from 'react';
@@ -62,6 +62,11 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   flatList: {
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+    flex: 1
+  },
+  scrollView: {
+    backgroundColor: 'pink',
+    marginHorizontal: 20,
+  },
 });
