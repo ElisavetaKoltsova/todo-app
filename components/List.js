@@ -4,7 +4,6 @@ export default function List({listElement, onPress}) {
   if (listElement) {
     return (
       <View style={styles.main}>
-        {console.log(listElement)}
         <Text style={styles.text}>{listElement.text}</Text>
         <TouchableOpacity onPress={() => onPress(listElement)}>
           <Text style={styles.button}>X</Text>
