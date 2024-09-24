@@ -7,30 +7,34 @@ import AddForm from './components/AddForm';
 export default function App() {
   const [listOfToDo, setListOfToDo] = useState([
     {
-      text: 'Bye ice cream',
+      text: 'Buy ice cream',
+      id: 0
     },
     {
       text: 'Do homework',
+      id: 1
     },
     {
       text: 'Cook diner',
+      id: 2
     },
     {
       text: 'Meet with friends',
+      id: 3
     },
   ]);
 
   handlePressDeleteButton = (listElement) => {
-    const copyListOfToDo = [...listOfToDo];
-    delete copyListOfToDo[listElement.text];
-    setListOfToDo(copyListOfToDo);
+    const copyListOfToDo = listOfToDo.filter((item) => item.id !== listElement.id);
+    setListOfToDo([...copyListOfToDo]);
   };
 
   handlePressAddButton = (newListElement) => {
     setListOfToDo([
       ...listOfToDo,
       {
-        text: newListElement
+        text: newListElement,
+        id: Math.round(Math.random() * 1000)
       }
     ]);
   }
@@ -40,7 +44,7 @@ export default function App() {
       <Header />
       <AddForm onPress={handlePressAddButton}/>
       <View style={styles.flatList}>
-        {console.log(listOfToDo.length)}
+        {console.log(listOfToDo)}
         {
           listOfToDo.length !== 0
           ?

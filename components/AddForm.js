@@ -22,10 +22,10 @@ export default function AddForm({onPress}) {
 
 const styles = StyleSheet.create({
   main: {
-    margin: '10%'
+    margin: '5%'
   },
   textInput: {
-    width: '80%',
+    width: '95%',
     backgroundColor: 'white',
     color: 'black',
     fontSize: 18,
@@ -41,9 +41,12 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     borderColor: 'white',
     borderWidth: 2,
-    width: '40%'
+    width: '40%',
+    padding: 5,
+    marginTop: 5
   },
   text: {
     color: 'white',
+    textAlign: 'center'
   }
 });
