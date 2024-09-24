@@ -44,11 +44,7 @@ export default function App() {
       <Header />
       <AddForm onPress={handlePressAddButton}/>
       <View style={styles.flatList}>
-        {console.log(listOfToDo)}
-        {
-          listOfToDo.length !== 0
-          ?
-          <FlatList
+        <FlatList
             data={listOfToDo}
             renderItem={({item}) => (
               <List
@@ -56,8 +52,6 @@ export default function App() {
                 onPress={handlePressDeleteButton}/>
             )}
           />
-          : <Text>No one to do</Text>
-        }
       </View>
     </View>
   );
